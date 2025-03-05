@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Головна сторінка</title>
+</head>
+<body>
+    <h1>Ласкаво просимо!</h1>
+    <form id="loginForm">
+        <label for="username">Ім'я користувача:</label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Увійти</button>
+    </form>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
