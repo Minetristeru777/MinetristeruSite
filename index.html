@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vUKRideo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>vUKRideo</h1>
+
+        <!-- Registration Form -->
+        <div id="register-form" class="form-container">
+            <h2>Register</h2>
+            <input type="text" id="register-username" placeholder="Username" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms('login')">Login here</a></p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form" class="form-container">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms('register')">Register here</a></p>
+            <button onclick="guestLogin()">Login as Guest</button>
+        </div>
+
+        <!-- Video Upload and Delete Section -->
+        <div id="upload-section" class="form-container">
+            <h2>Upload Video</h2>
+            <input type="file" id="video-upload" accept="video/*">
+            <button onclick="uploadVideo()">Upload</button>
+            <h3>Uploaded Videos:</h3>
+            <ul id="video-list-items"></ul>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
